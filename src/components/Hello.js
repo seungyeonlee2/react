@@ -6,8 +6,8 @@ class Hello extends React.Component {
 
     return (
       <>
-      <h1>하하호호</h1>
-      <h2>냥양용요</h2>
+        <h1>하하호호</h1>
+        <h2>냠냠뇸뇽</h2>
       </>
     );
   }
