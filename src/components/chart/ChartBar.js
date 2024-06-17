@@ -10,11 +10,11 @@ const ChartBar = ({ label, currentMonthValue, totalValue }) => {
   // };
 
   let barFillHeight = '0%';
+
   if (totalValue > 0) {
     const percentage = (currentMonthValue / totalValue) * 100;
     barFillHeight = percentage + '%';
   }
-
 
   return (
     <div className="chart-bar">

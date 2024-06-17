@@ -19,21 +19,20 @@ const ExpenseList = ({ expenses }) => {
     (ex) => ex.date.getFullYear().toString() === filteredYear
   );
 
-    // 지출데이터가 없을 때 보여줄 태그
-    let content = <p>지출 항목이 없습니다.</p>;
+  // 지출데이터가 없을 때 보여줄 태그
+  let content = <p>지출 항목이 없습니다.</p>;
 
   // 지출데이터가 있을 때 보여줄 태그
-  if(filteredExpenses.length > 0) {
-  content = filteredExpenses.map(({ title, price, date }) => (
-    <ExpenseItem
-      key={Math.random().toString()}
-      title={title}
-      price={price}
-      date={date}
-    />
-  ));
-}
-
+  if (filteredExpenses.length > 0) {
+    content = filteredExpenses.map(({ title, price, date }) => (
+      <ExpenseItem
+        key={Math.random().toString()}
+        title={title}
+        price={price}
+        date={date}
+      />
+    ));
+  }
 
   return (
     <div className="expenses">

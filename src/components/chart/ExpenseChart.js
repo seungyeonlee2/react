@@ -32,7 +32,7 @@ const ExpenseChart = ({ expenses }) => {
     chartDataPoints[expenseMonth].value += expensePrice;
   });
 
-  console.log('cdp: ', chartDataPoints);
+  // console.log('cdp: ', chartDataPoints);
 
   return <Chart dataPoints={chartDataPoints} />;
 };

@@ -66,6 +66,7 @@ const CourseInput = ({ onAdd }) => {
     $ul.appendChild($div);
   };
 
+
   return (
     <form onSubmit={formSubmitHandler}>
       <div className={`${formControl} ${!isValid ? invalid : ''}`}>

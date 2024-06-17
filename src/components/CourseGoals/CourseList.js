@@ -3,7 +3,6 @@ import React from 'react';
 import CourseItem from './CourseItem';
 import styled from 'styled-components';
 
-
 const CourseUl = styled.ul`
   list-style: none;
   margin: 0;
@@ -12,7 +11,7 @@ const CourseUl = styled.ul`
 
 const CourseList = ({ items, onDelete }) => {
   return (
-    <CourseUl className="goal-list">
+    <CourseUl>
       {items.map((item) => (
         <CourseItem
           key={item.id}
