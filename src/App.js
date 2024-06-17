@@ -10,6 +10,8 @@ const App = () => {
   // 회원들이 저장될 배열
   const [userList, setUserList] = useState([]);
 
+  let cnt = 1;
+
   const count = useRef(1);
   console.log('count: ', count);
 
