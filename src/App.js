@@ -40,8 +40,9 @@ const App = () => {
     // goals.splice(goals.findIndex(g => g.id === id), 1);
 
     setGoals(goals.filter(g=>g.id !== id));
-
   };
+
+
 
   return (
     <div>
