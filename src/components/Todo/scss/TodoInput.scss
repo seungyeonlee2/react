@@ -1,6 +1,5 @@
 
 
-
 .form-wrapper {
   width: 100%;
   position: absolute;
@@ -31,7 +30,6 @@
 .insert-btn {
   background: #38d9a9;
 
-  // 이전 부모태그 불러옴
   &:hover {
     background: #63e6be;
   }
