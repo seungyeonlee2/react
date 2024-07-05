@@ -4,9 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import RootLayout from './components/RouteExample/layout/RootLayout';
 import ErrorPage from './components/RouteExample/pages/ErrorPage';
 import Events, { loader as eventListLoader } from './components/RouteExample/pages/Events';
-import EventDetail, { loader as eventDetailLoader } from './components/RouteExample/pages/EventDetail';
+import EventDetail, { loader as eventDetailLoader, action as deleteAction } from './components/RouteExample/pages/EventDetail';
 import EventLayout from './components/RouteExample/layout/EventLayout';
-import NewEvent from './components/RouteExample/pages/NewEvent';
+import NewEvent, { action, action as manipulateAction } from './components/RouteExample/pages/NewEvent';
 import EditPage from './components/RouteExample/pages/EditPage';
 
 // 라우터 설정
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
           { 
             index: true, 
             element: <Events />,
-            loader: eventListLoader,
+            // loader: eventListLoader,
           },
           { 
             path: ':eventId', 
@@ -34,8 +34,16 @@ const router = createBrowserRouter([
             // EventDetail에서 loader를 사용하지 못하고 있음.
             id: 'event-detail', // loader에게 ID 부여
             children: [
-              { index: true, element: <EventDetail /> },
-              { path: 'edit', element: <EditPage /> },
+              { 
+                index: true, 
+                element: <EventDetail />, 
+                action: deleteAction 
+              },
+              { 
+                path: 'edit', 
+                element: <EditPage />,
+                action: manipulateAction
+              },
             ]
           },
           { path: 'new', element: <NewEvent /> },
