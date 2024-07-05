@@ -7,7 +7,7 @@ import React from "react";
 const AuthContext = React.createContext(
   {
     isLoggedIn: false,
-    onLogout: () => {}, // 타입 기본데이터를 넣으면 에디터에서 자동완성이 뜸
+    onLogout: () => {}, // 타입기본데이터를 넣으면 에디터에서 자동완성이뜸
   }
 );
 
